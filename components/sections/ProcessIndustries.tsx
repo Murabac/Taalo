@@ -46,8 +46,8 @@ const industryIcons = [
 
 export function ProcessIndustries() {
   return (
-    <section className="bg-navy py-20 text-white sm:py-24">
-      <div className="grid w-full grid-cols-1 gap-x-4 gap-y-10 px-4 lg:grid-cols-[minmax(0,7fr)_1px_minmax(0,5fr)] lg:grid-rows-[auto_1fr] lg:gap-x-16 lg:px-5">
+    <section className="bg-navy py-14 text-white sm:py-20 lg:py-24">
+      <div className="grid w-full grid-cols-1 gap-x-4 gap-y-12 px-4 lg:grid-cols-[minmax(0,7fr)_1px_minmax(0,5fr)] lg:grid-rows-[auto_1fr] lg:gap-x-16 lg:px-5">
         <div id="process" className="scroll-mt-24 lg:col-start-1 lg:row-start-1">
           <SectionHeading
             light

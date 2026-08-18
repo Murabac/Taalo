@@ -17,7 +17,7 @@ export function SectionHeading({
         {label}
       </p>
       <h2
-        className={`text-3xl font-bold leading-tight md:text-4xl ${
+        className={`text-2xl font-bold leading-tight break-words sm:text-3xl md:text-4xl ${
           light ? "text-white" : "text-navy"
         }`}
       >

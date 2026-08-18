@@ -31,6 +31,7 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-inter), system-ui, sans-serif;
+  overflow-x: hidden;
 }
 
 h1,
@@ -43,4 +44,50 @@ h4 {
 ::selection {
   background: #d4a25f;
   color: #0a1128;
+}
+
+.hero-bubbles {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.hero-bubble {
+  position: absolute;
+  border-radius: 9999px;
+  border: 1px solid rgba(212, 162, 95, 0.45);
+  background: radial-gradient(
+    circle at 32% 28%,
+    rgba(255, 255, 255, 0.16),
+    rgba(212, 162, 95, 0.12) 45%,
+    rgba(212, 162, 95, 0.02) 70%
+  );
+  animation-name: hero-float;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes hero-float {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.45;
+  }
+  50% {
+    transform: translateY(-28px) scale(1.12);
+    opacity: 0.9;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-bubble {
+    animation: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-bubbles {
+    display: none;
+  }
 }

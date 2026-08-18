@@ -8,18 +8,17 @@ export function Founder() {
   return (
     <section className="bg-white">
       <div className="grid lg:grid-cols-3">
-        <div className="flex items-center justify-center overflow-hidden bg-wash">
+        <div className="relative h-64 overflow-hidden bg-wash sm:h-80 lg:h-auto lg:min-h-[420px]">
           <Image
             src={photos.founderDesk}
             alt={`${site.founder} at work`}
-            width={1600}
-            height={1067}
-            className="h-full w-auto max-w-none"
+            fill
+            className="object-cover object-top"
             sizes="(min-width: 1024px) 33vw, 100vw"
           />
         </div>
 
-        <div className="flex flex-col justify-center bg-white px-8 py-12 sm:px-10">
+        <div className="flex flex-col justify-center bg-white px-5 py-10 sm:px-10 lg:py-12">
           <SectionHeading
             label="Founder Message"
             title="Our Commitment To You"
@@ -30,16 +29,16 @@ export function Founder() {
             impact. We believe every story deserves to be seen and remembered.
             We are here to make that happen.
           </p>
-          <p className="mt-8 font-signature text-4xl text-gold">
+          <p className="mt-8 font-signature text-3xl text-gold sm:text-4xl">
             {site.founderShort}
           </p>
           <p className="mt-3 text-sm font-bold text-navy">{site.founder}</p>
           <p className="mt-0.5 text-sm text-muted">{site.title}</p>
         </div>
 
-        <div className="flex flex-col justify-center bg-navy px-8 py-12 sm:px-10">
+        <div className="flex flex-col justify-center bg-navy px-5 py-10 sm:px-10 lg:py-12">
           <Rocket className="mb-5 size-10 stroke-[1.5] text-gold" />
-          <h2 className="text-3xl font-bold leading-tight text-white">
+          <h2 className="text-2xl font-bold leading-tight text-white sm:text-3xl">
             Ready To Start Your Project?
           </h2>
           <p className="mt-4 text-[15px] leading-relaxed text-white/80">
@@ -47,7 +46,7 @@ export function Founder() {
             amazing together.
           </p>
           <div className="mt-8">
-            <Button href={site.whatsapp} external>
+            <Button href={site.whatsapp} external className="w-full sm:w-auto">
               Let&apos;s Work Together
             </Button>
           </div>

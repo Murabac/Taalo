@@ -30,7 +30,6 @@ export const socials = [
 
 export const photos = {
   hero: "/hero-background.jpg",
-  building: "/about-1.jpg",
   founderPortrait: "/about-2.jpg",
   founderDesk: "/commitment.jpg",
 };

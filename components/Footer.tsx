@@ -11,7 +11,7 @@ import { socialIcons } from "@/components/icons/SocialIcons";
 export function Footer() {
   return (
     <footer id="contact" className="scroll-mt-24 bg-navy text-white">
-      <div className="grid w-full grid-cols-1 gap-x-12 gap-y-10 px-4 py-16 sm:grid-cols-2 lg:grid-cols-[1.3fr_auto_1.1fr_1.1fr] lg:items-start lg:justify-between lg:px-5">
+      <div className="grid w-full grid-cols-1 gap-x-12 gap-y-10 px-4 py-12 sm:grid-cols-2 sm:py-16 lg:grid-cols-[1.3fr_auto_1.1fr_1.1fr] lg:items-start lg:justify-between lg:px-5">
         <div className="space-y-5">
           <a href="#home" className="inline-flex flex-col items-center leading-none">
             <span className="font-heading text-[1.7rem] font-extrabold tracking-[0.18em] text-white">
@@ -128,7 +128,7 @@ export function Footer() {
       </div>
 
       <div className="border-t border-white/15">
-        <div className="flex w-full flex-col gap-3 px-4 py-5 text-sm text-white sm:flex-row sm:items-center sm:justify-between lg:px-5">
+        <div className="flex w-full flex-col gap-3 px-4 py-5 pb-24 text-xs text-white sm:flex-row sm:items-center sm:justify-between sm:pb-5 sm:text-sm lg:px-5">
           <p>© 2025 {site.name}. All Rights Reserved.</p>
           <p>
             <a href={`mailto:${site.email}`} className="hover:text-gold">

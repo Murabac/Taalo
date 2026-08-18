@@ -1,4 +1,4 @@
-import { Quote, Share2, Shield, Sun } from "lucide-react";
+import { MapPin, Quote, Share2, Shield, Sun } from "lucide-react";
 import Image from "next/image";
 import { photos, site, values } from "@/lib/content";
 import { Button } from "@/components/ui/Button";
@@ -9,8 +9,8 @@ const valueIcons = [Shield, Sun, Share2];
 export function About() {
   return (
     <section id="about" className="scroll-mt-24 bg-wash pb-20 sm:pb-24">
-      <div className="grid w-full items-stretch gap-8 lg:grid-cols-[1.1fr_1.4fr] lg:gap-10">
-        <div className="flex flex-col justify-center px-4 lg:pl-5 lg:pr-0">
+      <div className="grid w-full items-stretch gap-0 lg:grid-cols-[1.15fr_0.95fr_0.85fr]">
+        <div className="flex flex-col justify-center px-5 py-10 lg:px-8 lg:py-16">
           <SectionHeading
             label="About Taalo"
             title={
@@ -20,7 +20,7 @@ export function About() {
               </>
             }
           />
-          <p className="mt-6 text-[15px] leading-relaxed text-muted">
+          <p className="mt-6 max-w-xl text-[15px] leading-relaxed text-muted">
             Taalo Marketing Company exists to turn ideas into stories people
             remember. We combine strategy, design, and production so your
             message lands with purpose — whether you are a government office,
@@ -47,36 +47,45 @@ export function About() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 gap-0 sm:grid-cols-2 lg:min-h-[560px]">
-        <div className="relative min-h-[420px] h-full overflow-hidden lg:min-h-0">
-          <Image
-            src={photos.building}
-            alt="Taalo Marketing Company office"
-            fill
-            className="object-cover"
-            sizes="(min-width: 1024px) 30vw, 100vw"
-          />
+        <div className="flex flex-col justify-center bg-navy px-5 py-10 text-white sm:px-8 lg:px-10 lg:py-16">
+          <Quote className="mb-6 size-10 fill-gold text-gold" />
+          <p className="font-heading text-2xl font-bold leading-snug lg:text-3xl">
+            A great brand is not only seen.{" "}
+            <span className="text-gold">It is understood.</span>
+          </p>
+          <p className="mt-6 text-sm leading-relaxed text-white/70">
+            From Hargeisa, we help institutions and brands say who they are
+            with clarity — through branding, digital, film, and public
+            communication.
+          </p>
+          <div className="mt-10 flex items-start gap-3 border-t border-white/15 pt-6">
+            <MapPin className="mt-0.5 size-4 shrink-0 text-gold" />
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.16em] text-gold">
+                Based in
+              </p>
+              <p className="mt-1 text-sm">{site.address}</p>
+            </div>
+          </div>
         </div>
 
-        <div className="flex flex-col lg:min-h-0">
-          <div className="relative min-h-[280px] flex-1 overflow-hidden">
+        <div className="flex min-h-[360px] flex-col sm:min-h-[420px] lg:min-h-[560px]">
+          <div className="relative min-h-[240px] flex-1 sm:min-h-[280px]">
             <Image
               src={photos.founderPortrait}
               alt={`${site.founder}, ${site.title}`}
               fill
               className="object-cover object-top"
-              sizes="(min-width: 1024px) 22vw, 100vw"
+              sizes="(min-width: 1024px) 28vw, 100vw"
             />
           </div>
           <div className="bg-navy px-6 py-7">
-            <Quote className="mb-4 size-8 fill-gold text-gold" />
             <p className="text-lg font-bold text-white">{site.founder}</p>
             <p className="mt-1 text-sm text-white/60">{site.title}</p>
-            <p className="mt-6 font-signature text-3xl text-gold">
+            <p className="mt-5 font-signature text-3xl text-gold">
               {site.founderShort}
             </p>
           </div>
-        </div>
         </div>
       </div>
     </section>

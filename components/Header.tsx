@@ -35,7 +35,7 @@ export function Header() {
           className="inline-flex flex-col items-center justify-self-start leading-none"
           onClick={() => setOpen(false)}
         >
-          <span className="font-heading text-[1.7rem] font-extrabold tracking-[0.18em] text-white sm:text-[1.9rem]">
+          <span className="font-heading text-[1.45rem] font-extrabold tracking-[0.14em] text-white sm:text-[1.9rem] sm:tracking-[0.18em]">
             TA<span className="text-gold">A</span>LO
           </span>
           <span className="mt-1 text-[8px] font-medium uppercase tracking-[0.14em] text-white/90 sm:text-[9px]">
@@ -73,7 +73,7 @@ export function Header() {
           </Button>
           <button
             type="button"
-            className="inline-flex size-10 items-center justify-center text-white"
+            className="inline-flex size-10 items-center justify-center text-white lg:hidden"
             aria-label={open ? "Close menu" : "Open menu"}
             onClick={() => setOpen((value) => !value)}
           >
@@ -83,7 +83,7 @@ export function Header() {
       </div>
 
       {open ? (
-        <nav className="border-t border-white/10 bg-navy px-5 py-6">
+        <nav className="border-t border-white/10 bg-navy px-5 py-6 lg:hidden">
           <div className="mx-auto flex max-w-7xl flex-col gap-4">
             {navLinks.map((link) => (
               <a

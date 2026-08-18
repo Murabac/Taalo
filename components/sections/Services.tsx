@@ -32,9 +32,9 @@ const icons = [
 
 export function Services() {
   return (
-    <section id="services" className="scroll-mt-24 bg-wash pb-20 sm:pb-24">
-      <div className="mx-auto max-w-[1400px] px-5 sm:px-8">
-        <div className="mb-14 text-center">
+    <section id="services" className="scroll-mt-24 bg-wash px-0 pb-16 sm:pb-24">
+      <div className="mx-auto max-w-[1400px] px-4 sm:px-8">
+        <div className="mb-10 text-center sm:mb-14">
           <SectionHeading
             label="Our Services"
             title={
