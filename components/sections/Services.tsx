@@ -12,8 +12,7 @@ import {
   Video,
   Volume2,
 } from "lucide-react";
-import { services, site } from "@/lib/content";
-import { Button } from "@/components/ui/Button";
+import { services } from "@/lib/content";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
 const icons = [
@@ -61,12 +60,6 @@ export function Services() {
               </article>
             );
           })}
-        </div>
-
-        <div className="mt-12 text-center">
-          <Button href={site.whatsapp} external variant="navy" className="rounded-sm">
-            View All Services
-          </Button>
         </div>
       </div>
     </section>
