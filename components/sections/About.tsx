@@ -8,7 +8,7 @@ const valueIcons = [Shield, Sun, Share2];
 
 export function About() {
   return (
-    <section id="about" className="scroll-mt-24 bg-wash pb-20 sm:pb-24">
+    <section id="about" className="relative z-20 -mt-2 scroll-mt-24 rounded-t-[2.25rem] bg-wash pb-20 sm:pb-24 md:mt-0 md:rounded-none">
       <div className="grid w-full items-stretch gap-0 lg:grid-cols-[1.15fr_0.95fr_0.85fr]">
         <div className="flex flex-col justify-center px-5 py-10 lg:px-8 lg:py-16">
           <SectionHeading

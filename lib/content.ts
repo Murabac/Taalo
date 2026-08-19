@@ -30,9 +30,23 @@ export const socials = [
 
 export const photos = {
   hero: "/hero-background.jpg",
+  heroMobile: "/mobile-background.png",
   founderPortrait: "/about-2.jpg",
   founderDesk: "/commitment.jpg",
 };
+
+export const trustedBy = [
+  "Government",
+  "Companies",
+  "Universities",
+  "NGOs",
+] as const;
+
+export const heroStats = [
+  { value: "100+", label: "Projects Completed" },
+  { value: "15+", label: "Years Experience" },
+  { value: "98%", label: "Client Satisfaction" },
+] as const;
 
 export const values = [
   {

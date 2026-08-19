@@ -46,6 +46,37 @@ h4 {
   color: #0a1128;
 }
 
+.hero-dots {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.16) 1.2px, transparent 1.2px);
+  background-size: 22px 22px;
+  mask-image: radial-gradient(ellipse 80% 70% at 70% 35%, #000 20%, transparent 75%);
+}
+
+.hero-glow {
+  pointer-events: none;
+  position: absolute;
+  right: -18%;
+  top: 8%;
+  width: 260px;
+  height: 260px;
+  border-radius: 9999px;
+  border: 1.5px solid rgba(212, 162, 95, 0.38);
+  box-shadow:
+    0 0 60px rgba(212, 162, 95, 0.18),
+    inset 0 0 40px rgba(212, 162, 95, 0.08);
+}
+
+.hero-underline {
+  position: absolute;
+  left: 0;
+  bottom: -0.15em;
+  width: 92%;
+  height: 10px;
+}
+
 .hero-bubbles {
   pointer-events: none;
   position: absolute;
@@ -87,7 +118,9 @@ h4 {
 }
 
 @media (min-width: 768px) {
-  .hero-bubbles {
+  .hero-bubbles,
+  .hero-dots,
+  .hero-glow {
     display: none;
   }
 }

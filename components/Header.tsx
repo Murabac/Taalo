@@ -29,7 +29,7 @@ export function Header() {
         scrolled || open ? "bg-navy/95 shadow-lg backdrop-blur-md" : "bg-transparent"
       }`}
     >
-      <div className="mx-auto grid max-w-7xl grid-cols-[1fr_auto] items-center gap-4 px-5 py-4 sm:px-8 lg:grid-cols-[1fr_auto_1fr] lg:px-10">
+      <div className="mx-auto grid max-w-7xl grid-cols-[auto_1fr_auto] items-center gap-2 px-4 py-3 sm:gap-4 sm:px-8 sm:py-4 lg:grid-cols-[1fr_auto_1fr] lg:px-10">
         <a
           href="#home"
           className="inline-flex flex-col items-center justify-self-start leading-none"
@@ -61,15 +61,14 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="flex items-center justify-end gap-3">
+        <div className="flex items-center justify-end gap-2 sm:gap-3">
           <Button
             href={site.whatsapp}
             external
             variant="goldOutline"
-            showArrow={false}
-            className="hidden px-5 py-2.5 text-gold sm:inline-flex"
+            className="rounded-md px-3 py-2 text-[9px] tracking-[0.12em] sm:px-5 sm:py-2.5 sm:text-xs"
           >
-            Let&apos;s Talk
+            Get A Quote
           </Button>
           <button
             type="button"
@@ -97,14 +96,6 @@ export function Header() {
                 {link.label}
               </a>
             ))}
-            <Button
-              href={site.whatsapp}
-              external
-              className="mt-2 w-fit"
-              onClick={() => setOpen(false)}
-            >
-              Let&apos;s Talk
-            </Button>
           </div>
         </nav>
       ) : null}
