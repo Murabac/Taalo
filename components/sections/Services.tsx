@@ -51,9 +51,11 @@ export function Services() {
             return (
               <article
                 key={service.title}
-                className="rounded-md bg-white p-6 text-center shadow-[0_8px_24px_rgba(10,17,40,0.06)]"
+                className="rounded-md border-[3px] border-navy bg-white p-6 text-center"
               >
-                <Icon className="mx-auto mb-4 size-8 stroke-[1.3] text-navy" />
+                <span className="mx-auto mb-4 flex size-14 items-center justify-center rounded-full bg-navy">
+                  <Icon className="size-7 stroke-[1.5] text-white" />
+                </span>
                 <h3 className="mb-2 text-sm font-bold text-navy">{service.title}</h3>
                 <p className="text-[13px] leading-relaxed text-muted">{service.body}</p>
               </article>
