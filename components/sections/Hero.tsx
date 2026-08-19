@@ -21,20 +21,19 @@ export function Hero() {
       </div>
 
       <div className="relative overflow-hidden pb-8 pt-24 md:hidden">
-        <div className="hero-dots" aria-hidden />
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-[78%]">
+        <div className="absolute inset-0">
           <Image
             src={photos.heroMobile}
-            alt="Marketing analytics dashboard"
+            alt="Taalo Marketing visual"
             fill
             priority
-            className="object-cover object-[32%_48%] origin-right scale-[1.55]"
-            sizes="80vw"
+            className="object-cover object-[40%_center]"
+            sizes="100vw"
           />
+          <div className="absolute inset-0 bg-gradient-to-r from-navy/88 via-navy/30 to-transparent" />
         </div>
-        <div className="pointer-events-none absolute inset-y-0 left-0 z-[1] w-[42%] bg-gradient-to-r from-navy via-navy/70 to-transparent" />
 
-        <div className="relative z-10 w-[62%] px-5">
+        <div className="relative z-10 w-[58%] px-5">
           <h1 className="font-heading text-[1.85rem] font-extrabold leading-[1.12] tracking-tight text-white">
             Marketing That Makes People{" "}
             <span className="relative inline-block text-gold">

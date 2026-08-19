@@ -45,19 +45,24 @@ export function Services() {
           />
         </div>
 
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-5">
           {services.map((service, index) => {
             const Icon = icons[index];
             return (
               <article
                 key={service.title}
-                className="rounded-md border-[3px] border-navy bg-white p-6 text-center"
+                className="flex items-center gap-4 rounded-lg border border-navy bg-white p-4 shadow-[0_8px_20px_rgba(10,17,40,0.08)] lg:flex-col lg:rounded-md lg:border-[3px] lg:p-6 lg:text-center lg:shadow-none"
               >
-                <span className="mx-auto mb-4 flex size-14 items-center justify-center rounded-full bg-navy">
-                  <Icon className="size-7 stroke-[1.5] text-white" />
+                <span className="flex size-14 shrink-0 items-center justify-center rounded-md bg-navy lg:mx-auto lg:mb-4 lg:rounded-full">
+                  <Icon className="size-7 stroke-[1.6] text-gold lg:text-white" />
                 </span>
-                <h3 className="mb-2 text-sm font-bold text-navy">{service.title}</h3>
-                <p className="text-[13px] leading-relaxed text-muted">{service.body}</p>
+                <div className="min-w-0 text-left lg:text-center">
+                  <h3 className="text-sm font-bold text-navy">{service.title}</h3>
+                  <span className="mt-1.5 mb-2 block h-px w-8 bg-gold lg:mx-auto lg:hidden" />
+                  <p className="text-[13px] leading-relaxed text-muted lg:mt-2">
+                    {service.body}
+                  </p>
+                </div>
               </article>
             );
           })}
