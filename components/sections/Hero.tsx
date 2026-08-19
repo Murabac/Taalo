@@ -1,21 +1,8 @@
-import {
-  ArrowRight,
-  Building2,
-  Globe,
-  GraduationCap,
-  Landmark,
-  Play,
-  Star,
-  ThumbsUp,
-  Users,
-} from "lucide-react";
+import { ArrowRight, Play } from "lucide-react";
 import Image from "next/image";
-import { heroStats, photos, site, socials, trustedBy } from "@/lib/content";
+import { photos, site, socials } from "@/lib/content";
 import { Button } from "@/components/ui/Button";
 import { socialIcons } from "@/components/icons/SocialIcons";
-
-const trustedIcons = [Landmark, Building2, GraduationCap, Globe];
-const statIcons = [Star, Users, ThumbsUp];
 
 export function Hero() {
   return (
@@ -33,20 +20,22 @@ export function Hero() {
         <div className="absolute inset-0 bg-gradient-to-r from-[#0b1326]/80 via-[#0b1326]/45 to-[#0b1326]/20" />
       </div>
 
-      <div className="relative overflow-hidden pb-6 pt-24 md:hidden">
+      <div className="relative overflow-hidden pb-8 pt-24 md:hidden">
         <div className="hero-dots" aria-hidden />
-        <Image
-          src={photos.heroMobile}
-          alt="Marketing analytics dashboard"
-          width={704}
-          height={942}
-          priority
-          className="pointer-events-none absolute top-[4.5rem] right-[-6%] h-[26rem] w-auto max-w-none object-contain"
-        />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-[78%]">
+          <Image
+            src={photos.heroMobile}
+            alt="Marketing analytics dashboard"
+            fill
+            priority
+            className="object-cover object-[32%_48%] origin-right scale-[1.55]"
+            sizes="80vw"
+          />
+        </div>
         <div className="pointer-events-none absolute inset-y-0 left-0 z-[1] w-[42%] bg-gradient-to-r from-navy via-navy/70 to-transparent" />
 
-        <div className="relative z-10 px-5">
-          <h1 className="max-w-[16ch] font-heading text-[1.85rem] font-extrabold leading-[1.12] tracking-tight text-white sm:text-[2.15rem]">
+        <div className="relative z-10 w-[62%] px-5">
+          <h1 className="font-heading text-[1.85rem] font-extrabold leading-[1.12] tracking-tight text-white">
             Marketing That Makes People{" "}
             <span className="relative inline-block text-gold">
               Remember You.
@@ -65,62 +54,22 @@ export function Hero() {
               </svg>
             </span>
           </h1>
-          <p className="mt-4 text-[12px] leading-5 text-white/80 sm:text-[13px] sm:leading-6">
+          <p className="mt-4 text-[12px] leading-5 text-white/80">
             We help businesses, governments, NGOs, and organizations build
             powerful brands through strategy, creative design, digital marketing,
             video production, and storytelling.
           </p>
           <div className="mt-6 flex flex-col items-start gap-4">
-            <Button href={site.whatsapp} external className="rounded-lg px-5 py-3 text-[10px] sm:px-6 sm:py-3.5 sm:text-xs">
+            <Button href={site.whatsapp} external className="rounded-lg px-5 py-3 text-[10px]">
               Start Your Project
             </Button>
             <a
               href="#services"
-              className="inline-flex items-center gap-2 border-b border-gold pb-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-gold sm:text-[11px]"
+              className="inline-flex items-center gap-2 border-b border-gold pb-1 text-[10px] font-semibold uppercase tracking-[0.16em] text-gold"
             >
               View Our Work
               <ArrowRight className="size-3.5" />
             </a>
-          </div>
-        </div>
-
-        <div className="relative z-10 mx-4 mt-8 rounded-2xl border border-white/10 bg-[#10182c]/95 px-4 py-5 shadow-[0_20px_50px_rgba(0,0,0,0.35)]">
-          <p className="text-center text-[10px] font-semibold uppercase tracking-[0.28em] text-gold">
-            Trusted By
-          </p>
-          <div className="mt-4 grid grid-cols-4">
-            {trustedBy.map((label, index) => {
-              const Icon = trustedIcons[index];
-              return (
-                <div
-                  key={label}
-                  className={`flex flex-col items-center gap-1.5 px-1 ${
-                    index < trustedBy.length - 1 ? "border-r border-white/15" : ""
-                  }`}
-                >
-                  <Icon className="size-5 stroke-[1.5] text-gold" />
-                  <p className="text-center text-[9px] font-semibold uppercase tracking-[0.08em] text-white">
-                    {label}
-                  </p>
-                </div>
-              );
-            })}
-          </div>
-          <div className="mt-5 grid grid-cols-3 gap-2 border-t border-white/10 pt-4">
-            {heroStats.map((stat, index) => {
-              const Icon = statIcons[index];
-              return (
-                <div key={stat.label} className="flex flex-col items-center text-center">
-                  <span className="mb-2 inline-flex size-8 items-center justify-center rounded-full bg-gold text-navy">
-                    <Icon className="size-3.5 fill-navy" />
-                  </span>
-                  <p className="text-sm font-bold text-white">{stat.value}</p>
-                  <p className="mt-0.5 text-[9px] leading-tight text-white/70">
-                    {stat.label}
-                  </p>
-                </div>
-              );
-            })}
           </div>
         </div>
       </div>

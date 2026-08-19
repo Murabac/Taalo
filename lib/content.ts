@@ -35,19 +35,6 @@ export const photos = {
   founderDesk: "/commitment.jpg",
 };
 
-export const trustedBy = [
-  "Government",
-  "Companies",
-  "Universities",
-  "NGOs",
-] as const;
-
-export const heroStats = [
-  { value: "100+", label: "Projects Completed" },
-  { value: "15+", label: "Years Experience" },
-  { value: "98%", label: "Client Satisfaction" },
-] as const;
-
 export const values = [
   {
     title: "Our Mission",
@@ -65,15 +52,23 @@ export const values = [
 
 export const services = [
   {
-    title: "Branding & Identity",
-    body: "Build a strong brand that connects and stands out.",
-  },
-  {
     title: "Digital Marketing",
     body: "Reach the right audience with smart digital strategies.",
   },
   {
-    title: "Website Design",
+    title: "Commercial Video Production",
+    body: "High-quality videos that promote your brand.",
+  },
+  {
+    title: "Documentary Production",
+    body: "Powerful documentaries that tell real stories.",
+  },
+  {
+    title: "Social Media Management",
+    body: "Manage your social presence and grow your audience.",
+  },
+  {
+    title: "Website Design & Development",
     body: "Modern, responsive websites that represent your brand.",
   },
   {
@@ -81,32 +76,16 @@ export const services = [
     body: "Custom mobile apps for iOS and Android.",
   },
   {
-    title: "Documentary Production",
-    body: "Powerful documentaries that tell real stories.",
-  },
-  {
-    title: "Commercial Videos",
-    body: "High-quality videos that promote your brand.",
-  },
-  {
-    title: "Photography",
-    body: "Professional photography for every occasion.",
-  },
-  {
-    title: "Graphic Design",
-    body: "Creative designs that communicate your message.",
-  },
-  {
-    title: "Social Media Management",
-    body: "Manage your social presence and grow your audience.",
-  },
-  {
-    title: "Awareness Campaigns",
+    title: "Public Awareness Campaigns",
     body: "Impactful campaigns that create real change.",
   },
   {
     title: "Government Communication",
     body: "Strategic communication for public institutions.",
+  },
+  {
+    title: "Political Campaigns",
+    body: "Campaign communication that connects with voters.",
   },
   {
     title: "NGO Communication",
@@ -163,10 +142,10 @@ export const industries = [
 ] as const;
 
 export const footerServices = [
-  "Branding & Identity",
   "Digital Marketing",
-  "Website Design",
-  "App Development",
+  "Commercial Video Production",
   "Documentary Production",
+  "Social Media Management",
+  "Website Design & Development",
   "And More",
 ] as const;
